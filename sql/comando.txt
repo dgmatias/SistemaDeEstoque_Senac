@@ -17,5 +17,5 @@ CREATE TABLE produtos (
     nome varchar(100) NOT NULL,
     preco float NOT NULL,
     quantidade float NOT NULL,
-    minquantidade float NOT NULL
+    min_quantidade float NOT NULL
     );
