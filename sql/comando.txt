@@ -1,0 +1,12 @@
+create database projetointegrador
+
+use projetointegrador
+
+create table usuario (
+	id int AUTO_INCREMENT PRIMARY KEY,
+	nome varchar(40) NOT NULL,
+	email varchar(100) NOT NULL,
+    	senha varchar(100) NOT NULL,
+    	token varchar(100),
+    	avatar varchar(100)
+);
