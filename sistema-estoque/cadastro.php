@@ -25,7 +25,7 @@ if(isset($_SESSION['id'])){
     <div class="container">
         <h1> Crie sua conta </h1>
 
-        <form action="cadastro_action.php" method="get">
+        <form action="cadastro_action.php" method="post">
 
             <label for="">
                 Nome: <br>

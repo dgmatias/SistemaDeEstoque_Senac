@@ -13,7 +13,7 @@ if ($dados){
     $sql->execute();
 
     if ($sql->rowCount() === 1){
-        $resultado = $sql->fetch(PDO::FETCH_ASSSOC);
+        $resultado = $sql->fetch(PDO::FETCH_ASSOC);
 
         if (password_verify($dados['senha'], $resultado['senha'])){
             $_SESSION['id'] = $resultado['id'];

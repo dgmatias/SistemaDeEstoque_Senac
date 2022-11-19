@@ -24,11 +24,17 @@ if (isset($_SESSION['id'])){
 
     <div class="container">
 
-        <form action="login_action" method="post">
+        <form action="login_action.php" method="post">
 
-            <input type="text" name="email" id="">
-
-            <input type="password" name="senha" id="">
+            <label for="">
+                Email: <br>
+                <input type="text" name="email" id="">
+            </label> <br>
+            
+            <label for="">
+                Senha: <br>
+                <input type="password" name="senha" id="">
+            </label> <br>
 
             <button type="submit"> Entrar </button>
 
