@@ -1,5 +1,4 @@
 <?php
-
 $db_name = "projetointegrador";
 $db_host = "localhost";
 $db_user = "root";
