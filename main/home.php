@@ -12,12 +12,12 @@ ob_start();
 // }
 
 
-$query = [];
+$lista = [];
 
 $sql=$pdo->query("SELECT * FROM produtos");
 
 if($sql->rowCount() > 0){
-    $query = $sql->fetchall(PDO::FETCH_ASSOC);
+    $lista = $sql->fetchall(PDO::FETCH_ASSOC);
 }
 
 //Lista input get
@@ -54,9 +54,9 @@ if($sql->rowCount() > 0){
 
                 <div class="item-menu"> <a href=""> Home </a> </div>
 
-                <div class="item-menu"> <a href=""> Adicionar produtos </a> </div>
+                <div class="item-menu"> <a href="adicionar.php"> Adicionar produtos </a> </div>
 
-                <div class="item-menu"> <a href=""> Relatório </a> </div>
+                <div class="item-menu"> <a href="relatorio.php"> Relatório </a> </div>
 
             </div>  
 
@@ -66,7 +66,7 @@ if($sql->rowCount() > 0){
             
                 <div class="item-menu"> <span> Nome </span> </div>
 
-                <div class="item-menu"> <a href=""> sair </a> </div>
+                <div class="item-menu"> <a href="logout.php"> sair </a> </div>
 
             </div>
 
@@ -94,23 +94,21 @@ if($sql->rowCount() > 0){
             <table>
 
                 <tr>
-
+                    <th> Produto </th>
                     <th> codigo </th>
                     <th> nome </th>
                     <th> preço </th>
                     <th> quantidade </th>
-                    <th> min quantidade </th>
 
                 </tr>
 
-                <?php foreach($query as $usuario): ?>
+                <?php foreach($lista as $usuario): ?>
                     <tr>
-                
+                    <td> <img src="arquivo/<?=$usuario['avatar']; ?>" alt="foto-do-produto" id="img-produto"> </td>
                         <td> <?php echo $usuario['codigo']?> </td>
                         <td> <?php echo $usuario['nome']?> </td>
                         <td> <?php echo $usuario['preco']?> </td>
                         <td> <?php echo $usuario['quantidade']?> </td>
-                        <td> <?php echo $usuario['min_quantidade']?> </td>
                 
                         <td>
                 
