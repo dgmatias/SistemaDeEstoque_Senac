@@ -120,9 +120,7 @@ if($sql->rowCount() > 0){
                             > Editar </a>
                 
                         </td>
-                        ,
-                        ,
-                
+                      
                     </tr>
                 <?php endforeach; ?>
             </div>   
