@@ -72,9 +72,10 @@ if($sql->rowCount() > 0){
 
         </div>
 
+        
         <div id="query-container">
             
-            <div> <h2> Pesquisar </h2> </div>
+            <div> <h2> Pesquisar:   </h2> </div>
 
             <div id="form-container">
 
@@ -93,18 +94,21 @@ if($sql->rowCount() > 0){
 
             <table>
 
+            <div class="div-container">
                 <tr>
+                    <th> Imagem </th>
+                    <th> Cód. </th>
                     <th> Produto </th>
-                    <th> codigo </th>
-                    <th> nome </th>
-                    <th> preço </th>
-                    <th> quantidade </th>
-
+                    <th> Preço Unit. </th>
+                    <th> Qtd. </th>
+                    <th> Ações </th>
                 </tr>
+            </div>
 
+            <div class="div-info">
                 <?php foreach($lista as $usuario): ?>
                     <tr>
-                    <td> <img src="arquivo/<?=$usuario['avatar']; ?>" alt="foto-do-produto" id="img-produto"> </td>
+                    <td> <img class="image-product" src="arquivo/<?=$usuario['avatar']; ?>" alt="foto-do-produto" id="img-produto"> </td>
                         <td> <?php echo $usuario['codigo']?> </td>
                         <td> <?php echo $usuario['nome']?> </td>
                         <td> <?php echo $usuario['preco']?> </td>
@@ -112,14 +116,16 @@ if($sql->rowCount() > 0){
                 
                         <td>
                 
-                            <a href="editar.php?id=<?=$usuario['id']; ?>"
-                            class="input-editar"
+                            <a class="input-editar" href="editar.php?id=<?=$usuario['id']; ?>"
                             > Editar </a>
                 
                         </td>
+                        ,
+                        ,
                 
                     </tr>
-                <?php endforeach; ?>   
+                <?php endforeach; ?>
+            </div>   
             </table>
 
         </div>
