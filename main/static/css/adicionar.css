@@ -1,0 +1,33 @@
+body {
+    background-color: whitesmoke;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+form {
+    border: 2px black solid;
+    padding: 4rem;
+    background-color: #d49f0c;
+}
+
+.input-form {
+    background-color: #d49f0c;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+span {
+    color: black;
+    font-weight: bold;
+}
+
+.submit-form {
+    cursor: pointer;
+    width: 170px;
+}
