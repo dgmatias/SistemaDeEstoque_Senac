@@ -45,7 +45,6 @@
     align-items: center;
     grid-area: "query";
     height: 10vh;
-    background-color: whitesmoke;
 }
 
 .input-form {
@@ -54,34 +53,15 @@
     border-bottom: 1px black solid ;
 }
 
-
-/* Table-container */
-
 #table-container {
     grid-area: "table";
-    height: 80vh;
-    background-color: whitesmoke;
 }
 
 table {
-    width: 50%;
-}
-
-tr {
-    font-weight: bold;
+    width: 75%;
 }
 
 th {
-    font-size: 20px;
-    padding-bottom: .5rem;
-    font-weight: bold;
-}
-
-td {
-    text-align: center;
-    padding-bottom: .4rem;
-    font-size: 17px;
-    border-bottom: 2px solid black;
     font-weight: bold;
 }
 
@@ -91,3 +71,30 @@ td {
     padding: .5rem;
     margin-right: 1rem;
 }
+tr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   
+}
+tr th {
+    font-weight: bold;
+    width: 12vw;
+    
+}
+tr td {
+    text-align: center;
+    width: 12vw;
+}
+
+.div-info {
+    text-align: center;
+    background-color: pink;
+}
+
+.image-product {
+    width: 100px;
+    height: 100px;
+}
+
