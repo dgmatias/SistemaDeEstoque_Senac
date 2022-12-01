@@ -1,5 +1,10 @@
 <?php
+
+session_start();
+ob_start();
+
 require 'config.php';
+include 'head.php';
 
 //Filtra os valores enviados para o formulário.
  $codigo = filter_input (INPUT_GET, 'codigo');
@@ -29,48 +34,55 @@ require 'config.php';
  }
 ?>
 
-<html lang="en">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Produtos</title>
+    <link rel="stylesheet" href="./static/css/adicionar.css">
 </head>
 <body>
 
-    <h1>Adicionar Produtos</h1>
-    <div>
-        <form action="" method="get">
+    <?php include 'header.php'; ?>
 
-            <label for="">
-                Código:
-                <input type="number" name="codigo">
-            </label> </br>
+    <div class="flex-container">
+
+        <div id="form container">
+
+            <form action="" method="get">
+
+                <label for="">
+                  <span> Código: </span>  
+                </label>  <br>
+
+                <input class="input-form" type="number" name="codigo"> <br>
+                
+                <label for="">
+                   <span> Nome:  </span> 
+                </label>  <br>
+                
+                <input class="input-form" type="text" name="nome"> <br>
+
+                <label for="">
+                     <span>  Preço: </span> 
+                </label>  <br>
+                
+                <input class="input-form" type="text" name="preco"> <br>
+                
+                <label for="">
+                    <span>  Quantidade: </span> 
+                </label>  <br>
+                
+                <input class="input-form" type="text" name="quant"> <br>
+                
+                <label for="">
+                    <span> Quantidade mínima: </span> 
+                </label>  <br>
+                
+                <input class="input-form" type="text" name="min_quant"> <br>
+                
+                <input class="submit-form" type="submit" value="Adicionar">
+
+            </form> 
             
-            <label for="">
-                Nome:
-                <input type="text" name="nome">
-            </label> </br>
+        </div>
 
-            <label for="">
-                Preço:
-                <input type="text" name="preco">
-            </label> </br>
-            
-            <label for="">
-                Quantidade:
-                <input type="text" name="quant">
-            </label> </br>
-
-            <label for="">
-                Quantidade mínima:
-                <input type="text" name="min_quant">
-            </label> </br>
-
-            <input type="submit" value="Adicionar">
-        </form>
     </div>
-
-    
 </body>
 </html>
